@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Wish</title>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #9e1dad, #f5eb57);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: rgb(25, 11, 11);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+    }
+
+    .card h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      margin: 30px 0;
+    }
+
+    .card .balloons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .balloon {
+      width: 50px;
+      height: 70px;
+      background: radial-gradient(circle, #fff, #ff6f61);
+      border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%;
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .balloon:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: #621260;
+    }
+
+    .balloon:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .balloon:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p>
+     <h2> Happiest Birthday </h2>
+     <h1>Soujanya__Tegginamath</h1>
+    </p>
+     
+    <p>Wishing you a day filled with love, joy, and all your favorite things!</p>
+    <div class="balloons">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+     </div>
+
+  <button class="play-button" onclick="playMusic()">Play Music 🎵</button>
+  <audio id="birthdayMusic" src="gana.mp3"></audio>
+  <script src="bday.js"></script>
+</div>
+</body>
+</html>
